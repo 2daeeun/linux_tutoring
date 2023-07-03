@@ -1,0 +1,25 @@
+# alias
+alias powerup='sudo apt update && sudo apt upgrade'
+alias rrm="sudo mv -t /tmp"
+alias doc="cd ~/Documents"
+alias dow="cd ~/Downloads"
+alias vid="cd ~/Videos"
+alias lock60="timeout 60 xtrlock"
+alias weather_school="curl wttr.in/37.4868,126.8224"
+alias e="exit"
+
+# unzip 한글 깨짐 방지
+export UNZIP="-O cp949"
+export ZIPINFO="-O cp949"
+
+# "Shutdown & Reboot Command Not Found" error solve
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin
+
+# Cargo 환경변수
+export PATH="$PATH:~/.cargo/bin"
+
+# Dart 환경변수
+export PATH="$PATH:/usr/lib/dart/bin"
+
+# Java 환경변수
+export PATH="$PATH:JAVA_HOME/bin"

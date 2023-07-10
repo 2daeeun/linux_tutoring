@@ -21,5 +21,8 @@ export PATH="$PATH:~/.cargo/bin"
 # Dart 환경변수
 export PATH="$PATH:/usr/lib/dart/bin"
 
-# Java 환경변수
+# Javac 환경변수
 export PATH="$PATH:JAVA_HOME/bin"
+
+# gcc 환경변수
+export PATH="$PATH:/usr/bin/gcc"

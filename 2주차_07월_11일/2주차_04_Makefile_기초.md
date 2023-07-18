@@ -109,23 +109,23 @@ $ make clean
 
 좀 전의 Makefile을 변수를 사용하여 작성하면 다음과 같이 사용 할 수 있다.
 ```swift
-CC=gcc
-TARGET=a.out
+CC = gcc
+TARGET = main
 OBJS=a.o b.o main.o
  
-$(TARGET): $(OBJS)
-    $(CC) -o $@ $(OBJS)
+$(TARGET) : $(OBJS)
+	  $(CC) $(OBJS) -o $(TARGET)
 
-a.o : a.c
-    $(CC) -c -o a.o a.c
+foo.o : foo.c
+  	$(CC) -c foo.c
 
-b.o : b.c
-    $(CC) -c -o b.o b.c
+bar.o : bar.c
+  	$(CC) -c bar.c
 
 main.o : main.c
-    $(CC) -c -o main.o main.c
+  	$(CC) -c main.c
 
-clean:
+clean :
     rm $(OBJECT) $(TARGET)
 ```
 

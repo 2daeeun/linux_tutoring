@@ -73,19 +73,19 @@ $ ./main
 
 ```swift
 main : foo.o bar.o main.o
-	gcc foo.o bar.o main.o -o main
+  gcc foo.o bar.o main.o -o main
 
 foo.o : foo.c
-	gcc -c foo.c
+  gcc -c foo.c
 
 bar.o : bar.c
-	gcc -c bar.c
+  gcc -c bar.c
 
 main.o : main.c
-	gcc -c main.c
+  gcc -c main.c
 
 clean :
-	rm -f *.o main
+  rm -f *.o main
 ```
 ...이 된다.
 
@@ -111,22 +111,22 @@ $ make clean
 ```swift
 CC = gcc
 TARGET = main
-OBJS=a.o b.o main.o
+OBJS = a.o b.o main.o
  
 $(TARGET) : $(OBJS)
-	  $(CC) $(OBJS) -o $(TARGET)
+  $(CC) $(OBJS) -o $(TARGET)
 
 foo.o : foo.c
-  	$(CC) -c foo.c
+  $(CC) -c foo.c
 
 bar.o : bar.c
-  	$(CC) -c bar.c
+  $(CC) -c bar.c
 
 main.o : main.c
-  	$(CC) -c main.c
+  $(CC) -c main.c
 
 clean :
-    rm $(OBJECT) $(TARGET)
+  rm $(OBJECT) $(TARGET)
 ```
 
 Makefile의 변수는 세 가지로 나눌수가 있다.
@@ -176,13 +176,12 @@ Makefile의 변수는 세 가지로 나눌수가 있다.
 * **CMake**  
   프로젝트 규모가 커지면 Makefile 사용이 불편해지는 날이 언젠가는 올것입니다.  
 그런날이 올 때는 CMake를 알아보세요.  
-<br>
+
 * **Java 빌드 도구**  
-  다음과 같은 빌드 도구를 이용해서 Java 컴파일 보조를 할 수 있다고 하는데,  
-관심있으신 분은 직접 알아보세요.
-    * Apache Ant
-    * Gradle
-    * Maven
+  다음과 같은 빌드 도구를 이용해서 Java 컴파일 보조를 할 수 있다고 하는데, 관심있으신 분은 직접 알아보세요.
+  * Apache Ant
+  * Gradle
+  * Maven
 
 ### 참조
 [GNU make 공식 메뉴얼 문서](https://www.gnu.org/software/make/manual/make.html)  
